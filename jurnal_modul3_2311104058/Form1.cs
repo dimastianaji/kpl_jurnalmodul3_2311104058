@@ -17,6 +17,12 @@ namespace jurnal_modul3_2311104058
             InitializeComponent();
         }
 
+        string CalTotal;
+        int num1;
+        int num2;
+        string option;
+        int result;
+
         private void button1_Click(object sender, EventArgs e)
         {
             textTotal.Text = textTotal.Text + button1.Text;
@@ -65,6 +71,24 @@ namespace jurnal_modul3_2311104058
         private void button0_Click(object sender, EventArgs e)
         {
             textTotal.Text = textTotal.Text + button0.Text;
+        }
+
+        private void plusBtn_Click(object sender, EventArgs e)
+        {
+            option = "+";
+            num1 = int.Parse(textTotal.Text);
+
+            textTotal.Clear();
+        }
+
+        private void samaDenganBtn_Click(object sender, EventArgs e)
+        {
+            num2 = int.Parse(textTotal.Text);
+
+            if (option.Equals("+"))
+                result = num1 + num2;
+
+            textTotal.Text = result +"";
         }
     }
 }
